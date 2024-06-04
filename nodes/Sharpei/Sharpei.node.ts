@@ -28,7 +28,7 @@ export class Sharpei implements INodeType {
 			},
 		],
 		requestDefaults: {
-			baseURL: 'https://api.dev.gosharpei.com/api',
+			baseURL: 'https://api.prod.gosharpei.com/api',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',
