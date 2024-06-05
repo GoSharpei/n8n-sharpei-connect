@@ -13,8 +13,9 @@ export const customersOperations: INodeProperties[] = [
 		},
 		options: [
 			{ //LIST CUSTOMERS
-				name: 'List customers',
+				name: 'List Customers',
 				value: 'getCustomers',
+				// eslint-disable-next-line n8n-nodes-base/node-param-option-description-identical-to-name
 				description: 'List Customers',
 				routing: {
 					request: {
@@ -25,9 +26,10 @@ export const customersOperations: INodeProperties[] = [
 				action: 'List customers',
 			},
 			{ //CREATE A CUSTOMER
-				name: 'Create a customer',
+				name: 'Create a Customer',
 				value: 'createCustomer',
-				description: 'Create a customer',
+				// eslint-disable-next-line n8n-nodes-base/node-param-option-description-identical-to-name
+				description: 'Create a Customer',
 				routing: {
 					request: {
 						method: 'POST',
@@ -42,8 +44,9 @@ export const customersOperations: INodeProperties[] = [
 				action: 'Create customer',
 			},
 			{ //GET A CUSTOMER
-				name: 'Get a customer',
+				name: 'Get a Customer',
 				value: 'getCustomer',
+				// eslint-disable-next-line n8n-nodes-base/node-param-option-description-identical-to-name
 				description: 'Get a customer',
 				routing: {
 					request: {
@@ -58,9 +61,10 @@ export const customersOperations: INodeProperties[] = [
 				action: 'Get customer',
 			},
 			{//UPDATE A CUSTOMER
-				name: 'Update a customer',
+				name: 'Update a Customer',
 				value: 'updateCustomer',
-				description: 'Update a customer',
+				// eslint-disable-next-line n8n-nodes-base/node-param-option-description-identical-to-name
+				description: 'Update a Customer',
 				routing: {
 					request: {
 						method: 'PUT',
@@ -101,7 +105,7 @@ export const customersFields: INodeProperties[] = [
 		typeOptions: {
 			minValue: 1,
 		},
-		default: 100,
+		default: 50,
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
@@ -139,6 +143,7 @@ export const customersFields: INodeProperties[] = [
 		type: 'string',
 		required: true,
 		default: '',
+		// eslint-disable-next-line n8n-nodes-base/node-param-description-identical-to-display-name
 		description: 'Customer PID',
 		displayOptions: {
 			show: {
