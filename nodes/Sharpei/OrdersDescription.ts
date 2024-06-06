@@ -13,6 +13,7 @@ export const ordersOperations: INodeProperties[] = [
 		},
 		options: [
 			{ //GET ORDERS
+				// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 				name: 'List orders',
 				value: 'getOrders',
 				description: 'Get orders',
@@ -28,8 +29,10 @@ export const ordersOperations: INodeProperties[] = [
 				action: 'List orders',
 			},
 			{ //GET A SINGLE ORDER
+				// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 				name: 'Get order',
 				value: 'getOrder',
+				// eslint-disable-next-line n8n-nodes-base/node-param-option-description-identical-to-name
 				description: 'Get order',
 				routing: {
 					request: {
@@ -56,6 +59,7 @@ export const ordersFields: INodeProperties[] = [
 		type: 'string',
 		required: true,
 		default: '',
+		// eslint-disable-next-line n8n-nodes-base/node-param-description-identical-to-display-name
 		description: 'Order Pid',
 		displayOptions: {
 			show: {
