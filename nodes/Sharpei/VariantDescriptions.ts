@@ -13,9 +13,8 @@ export const variantOperations: INodeProperties[] = [
 		},
 		options: [
 			{ //CREATE A VARIANT
-				name: 'Create a variant',
+				name: 'Create Variant',
 				value: 'createVariant',
-				description: 'Create a variant',
 				routing: {
 					request: {
 						method: 'POST',
@@ -34,7 +33,6 @@ export const variantOperations: INodeProperties[] = [
 			{ //UPDATE A VARIANT
 				name: 'Update a Variant',
 				value: 'updateVariant',
-				description: 'Update a Variant',
 				routing: {
 					request: {
 						method: 'PUT',
@@ -46,12 +44,11 @@ export const variantOperations: INodeProperties[] = [
 					},
 					}
 				},
-				action: 'Update a Variant',
+				action: 'Update variant',
 			},
 			{ //DELETE A VARIANT
 				name: 'Delete a Variant',
 				value: 'deleteVariant',
-				description: 'Delete a Variant',
 				routing: {
 					request: {
 						method: 'DELETE',
@@ -62,12 +59,11 @@ export const variantOperations: INodeProperties[] = [
 					},
 					}
 				},
-				action: 'Delete a Variant',
+				action: 'Delete variant',
 			},
 			{ //DELETE IMAGE
-				name: 'Delete an Image',
+				name: 'Delete Image',
 				value: 'deleteImage',
-				description: 'Delete an Image',
 				routing: {
 					request: {
 						method: 'DELETE',
@@ -78,7 +74,7 @@ export const variantOperations: INodeProperties[] = [
 					},
 					}
 				},
-				action: 'Delete an Image',
+				action: 'Delete image',
 			},
 
 		],
@@ -207,7 +203,6 @@ export const variantFields: INodeProperties[] = [
 		type: 'string',
 		required: true,
 		default: '',
-		description: 'Image Pid',
 		displayOptions: {
 			show: {
 				resource: ['variants'],

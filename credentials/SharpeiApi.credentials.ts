@@ -5,6 +5,7 @@ import {
 } from 'n8n-workflow';
 
 export class SharpeiApi implements ICredentialType {
+
 	// eslint-disable-next-line n8n-nodes-base/cred-class-field-name-uppercase-first-char
 	name = 'SharpeiApi';
 	// eslint-disable-next-line n8n-nodes-base/cred-class-field-display-name-missing-api
@@ -14,8 +15,8 @@ export class SharpeiApi implements ICredentialType {
 		{
 			displayName: 'Private API Key',
 			name: 'apiKey',
-			// eslint-disable-next-line n8n-nodes-base/cred-class-field-unobscured-sensitive-input
 			type: 'string',
+			typeOptions: { password: true },
 			default: '',
 			placeholder:'Private API key from your Sharpei account.'
 		},

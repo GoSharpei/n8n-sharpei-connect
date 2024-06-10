@@ -15,8 +15,6 @@ export const optionsOperations: INodeProperties[] = [
 			{
 				name: 'Create Options',
 				value: 'createOptions',
-				// eslint-disable-next-line n8n-nodes-base/node-param-option-description-identical-to-name
-				description: 'Create Options',
 				routing: {
 					request: {
 						method: 'POST',
@@ -28,8 +26,8 @@ export const optionsOperations: INodeProperties[] = [
 					},
 					}
 				},
-				// eslint-disable-next-line n8n-nodes-base/node-param-operation-option-action-miscased
-				action: 'Create Options',
+
+				action: 'Create options',
 			},
 		],
 		default: 'createOptions',

@@ -15,8 +15,6 @@ export const customersOperations: INodeProperties[] = [
 			{ //LIST CUSTOMERS
 				name: 'List Customers',
 				value: 'getCustomers',
-				// eslint-disable-next-line n8n-nodes-base/node-param-option-description-identical-to-name
-				description: 'List Customers',
 				routing: {
 					request: {
 						method: 'GET',
@@ -26,10 +24,8 @@ export const customersOperations: INodeProperties[] = [
 				action: 'List customers',
 			},
 			{ //CREATE A CUSTOMER
-				name: 'Create a Customer',
+				name: 'Create Customer',
 				value: 'createCustomer',
-				// eslint-disable-next-line n8n-nodes-base/node-param-option-description-identical-to-name
-				description: 'Create a Customer',
 				routing: {
 					request: {
 						method: 'POST',
@@ -44,10 +40,8 @@ export const customersOperations: INodeProperties[] = [
 				action: 'Create customer',
 			},
 			{ //GET A CUSTOMER
-				name: 'Get a Customer',
+				name: 'Get Customer',
 				value: 'getCustomer',
-				// eslint-disable-next-line n8n-nodes-base/node-param-option-description-identical-to-name
-				description: 'Get a customer',
 				routing: {
 					request: {
 						method: 'GET',
@@ -61,10 +55,8 @@ export const customersOperations: INodeProperties[] = [
 				action: 'Get customer',
 			},
 			{//UPDATE A CUSTOMER
-				name: 'Update a Customer',
+				name: 'Update Customer',
 				value: 'updateCustomer',
-				// eslint-disable-next-line n8n-nodes-base/node-param-option-description-identical-to-name
-				description: 'Update a Customer',
 				routing: {
 					request: {
 						method: 'PUT',
@@ -76,7 +68,7 @@ export const customersOperations: INodeProperties[] = [
 					},
 					}
 				},
-				action: 'Update a customer',
+				action: 'Update customer',
 			},
 		],
 		default: 'getCustomers',
@@ -143,8 +135,6 @@ export const customersFields: INodeProperties[] = [
 		type: 'string',
 		required: true,
 		default: '',
-		// eslint-disable-next-line n8n-nodes-base/node-param-description-identical-to-display-name
-		description: 'Customer PID',
 		displayOptions: {
 			show: {
 				resource: ['customers'],
