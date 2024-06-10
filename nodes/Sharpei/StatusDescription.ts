@@ -15,14 +15,13 @@ export const statusOperations: INodeProperties[] = [
 			{
 				name: 'Get Status',
 				value: 'getStatus',
-				description: 'Get Status',
 				routing: {
 					request: {
 						method: 'GET',
 						url: '/status'
 					}
 				},
-				action: 'Get Status',
+				action: 'Get status',
 			},
 		],
 		default: 'getStatus',

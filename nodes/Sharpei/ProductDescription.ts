@@ -12,46 +12,9 @@ export const productOperations: INodeProperties[] = [
 			},
 		},
 		options: [
-			{//GET ALL PRODUCTS
-				name: 'List products',
-				value: 'getAll',
-				description: 'Get products',
-				routing: {
-					request: {
-						method: 'GET',
-						url: '/products'
-					}
-				},
-				action: 'List products',
-			},
-			{//GET PRODUCT BY REMOTE ID
-				name: 'Get product by remote Id',
-				value: 'get',
-				description: 'Get a single product',
-				routing: {
-					request: {
-						method: 'GET',
-						url: '={{"/products/" + $parameter["remoteId"]}}'
-					}
-				},
-				action: 'Get product by remote Id',
-			},
-			{//GET A SINGLE PRODUCT
-				name: 'Get a single product',
-				value: 'getSingleProduct',
-				description: 'Get a single product',
-				routing: {
-					request: {
-						method: 'GET',
-						url: '={{"/products/" + $parameter["pid"]}}'
-					}
-				},
-				action: 'Get a single product',
-			},
 			{//CREATE A PRODUCT
-				name: 'Create a product',
+				name: 'Create a Product',
 				value: 'createProduct',
-				description: 'Create a product',
 				routing: {
 					request: {
 						method: 'POST',
@@ -65,10 +28,53 @@ export const productOperations: INodeProperties[] = [
 				},
 				action: 'Create a product',
 			},
+			{//DELETE A PRODUCT
+				name: 'Delete a Product',
+				value: 'deleteProduct',
+				routing: {
+					request: {
+						method: 'DELETE',
+						url: '={{"/products/" + $parameter["pid"]}}'
+					}
+				},
+				action: 'Delete a product',
+			},
+			{//GET A SINGLE PRODUCT
+				name: 'Get a Single Product',
+				value: 'getSingleProduct',
+				routing: {
+					request: {
+						method: 'GET',
+						url: '={{"/products/" + $parameter["pid"]}}'
+					}
+				},
+				action: 'Get a single product',
+			},
+			{//GET ALL PRODUCTS
+				name: 'Get Many',
+				value: 'getAll',
+				routing: {
+					request: {
+						method: 'GET',
+						url: '/products'
+					}
+				},
+				action: 'List products',
+			},
+			{//GET PRODUCT BY REMOTE ID
+				name: 'Get Product by Remote ID',
+				value: 'get',
+				routing: {
+					request: {
+						method: 'GET',
+						url: '={{"/products/" + $parameter["remoteId"]}}'
+					}
+				},
+				action: 'Get product by remote ID',
+			},
 			{//UPDATE A PRODUCT
 				name: 'Update a Product',
 				value: 'updateProduct',
-				description: 'Update a Product',
 				routing: {
 					request: {
 						method: 'PUT',
@@ -80,20 +86,9 @@ export const productOperations: INodeProperties[] = [
 					},
 					}
 				},
-				action: 'Update a Product',
+				action: 'Update a product',
 			},
-			{//DELETE A PRODUCT
-				name: 'Delete a product',
-				value: 'deleteProduct',
-				description: 'Delete a product',
-				routing: {
-					request: {
-						method: 'DELETE',
-						url: '={{"/products/" + $parameter["pid"]}}'
-					}
-				},
-				action: 'Delete a Product',
-			},
+
 		],
 		default: 'getAll',
 	},
@@ -122,7 +117,7 @@ export const productFields: INodeProperties[] = [
 		typeOptions: {
 			minValue: 1,
 		},
-		default: 100,
+		default: 50,
 		description: 'Max number of results to return',
 		displayOptions: {
 			show: {
